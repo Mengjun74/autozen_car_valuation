@@ -1,0 +1,40 @@
+# conda env create -f autozen.yml
+# conda env update --file autozen.yml --prune
+name: 'autozen'
+channels:
+  - conda-forge
+  - pytorch
+  - anaconda
+  - defaults
+dependencies:
+  - ipykernel
+  - python=3.10
+  - jupyter 
+  - nb_conda_kernels
+  - scikit-learn  
+  - pandas
+  - pytorch
+  - gensim
+  - networkx
+  - graphviz
+  - python-graphviz
+  - pydot
+  - pyldavis
+  - panel
+  - ipywidgets
+  - torchvision
+  - mysql-connector-python
+  - nbformat
+  - pip
+  - pip:
+      - seaborn
+      - xgboost
+      - catboost
+      - torch-summary
+      - torchviz
+      - progress
+      - missingno
+      - shap 
+      - eli5
+      - pytest
+      - mock
