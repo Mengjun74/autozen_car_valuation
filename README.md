@@ -49,13 +49,7 @@ You can think of it as a data pipeline with multiple phases that leads to a trai
 
 
 ### Data Collection
-This phase's objective is to collect training and test data in order to train candidate models and validate prediction results using test data.
-* script: [scripts/data_collection.py](scripts/data_collection.py)
-* input: coordinates and credentials to the read-only replica of the RDS database in AWS/US-EAST-2
-* output:
-  * [data/raw_az_auctions.csv](data/raw_az_auctions.csv)
-  * [data/raw_az_inspections.csv](data/raw_az_inspections.csv)
-  * [data/raw_az_vehicles.csv](data/raw_az_vehicles.csv)
+Since the Data is private, I delete the data folder.
 
 ### Data Preprocessing
 During this step, the JSON columns are flattened and the pertinent attributes are extracted. In addition, the auctions, inspections, and vehicles tables are joined to create two distinct output csv files: There are two files: **processed_az_auctioned.csv**, which contains information about auctioned used cars, and **processed_az_auctioned_won.csv**, which represents the subset of auction-winning bids for used cars (i.e., cars that had willing buyers at the auction with an offer price).
